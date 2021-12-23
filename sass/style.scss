@@ -1,0 +1,20 @@
+@import "./colorLibrary";
+@import "./fontLibrary";
+
+body {
+  color: $font-color;
+  background-color: $background-color;
+}
+
+p {
+  font-family: Helvetica, Open-Sans, "sans-serif-light", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  color: $font-color;
+  text-transform: uppercase;
+  font-family: abchanel-corpo, sans-serif;
+  font-weight: 600;
+  letter-spacing: normal;
+}

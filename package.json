@@ -1,0 +1,22 @@
+{
+  "name": "chanel-landingpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardn/Chanel-LandingPage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ricardn/Chanel-LandingPage/issues"
+  },
+  "homepage": "https://github.com/Ricardn/Chanel-LandingPage#readme",
+  "dependencies": {
+    "sass": "^1.45.1"
+  }
+}

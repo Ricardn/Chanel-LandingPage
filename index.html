@@ -1,32 +1,201 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<html lang="fr">
 
-    <link rel="stylesheet" href="./sass/style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="icon" href="https://www.chanel.com/_ui/responsive/theme-onechanel/assets/media/favicon/192x192.png" />
     <link rel="preconnect" href="https://fonts.chanel.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.chanel.com/xjf7bmk.css"
-    />
-  </head>
-  <body>
-    <main>
-      <section id="hero">
+    <link rel="stylesheet" href="./sass/style.css" />
+
+    <title>Go To The Moon | CHANEL</title>
+</head>
+
+<body onload="onLoad()">
+    <section id="hero">
         <div class="hero-container">
-          <img src="" alt="" />
-          <p>P go to the moon</p>
-          <h1>H1 go to the moon</h1>
-          <h2>H2 go to the moon</h2>
-          <h3>H3 go to the moon</h3>
+            <div class="hero-image">
+                <picture>
+                    <img src="./assets/images/hero/hero.jpg" alt="" />
+                </picture>
+            </div>
+            <div class="hero-content">
+                <h3>go to the moon</h3>
+            </div>
         </div>
-      </section>
-      <section id="images"></section>
-      <section id="slider"></section>
+    </section>
+    <main>
+        <section id="images">
+            <div class="images-container">
+                <div class="images-content">
+                    <div class="images-title">
+                        <h1>over the moon*</h1>
+                    </div>
+                    <div class="images-paragraph">
+                        <small>
+                            <p>
+                                Quatre inconnus se rencontrent dans un ascenseur pour la Lune.
+                            </p>
+                        </small>
+                    </div>
+                </div>
+                <div class="images-Img"></div>
+            </div>
+        </section>
+        <section id="slider">
+            <div class="slider">
+                <div class="slider-container">
+                    <div id="slider-Block" class="slider-Block slide-in-right" data-info="1">
+                        <div class="slider-contentTest">
+                            <div class="slider-product-title">
+                                <h1>première rock pink blossom</h1>
+                            </div>
+                            <div class="slider-product-description">
+                                <small>
+                                    <p>
+                                        La <span class="uppercase">première rock</span> ose le
+                                        rose avec sa chaîne en acier entrelacée de cuir pastel. En
+                                        édition limitée.
+                                    </p>
+                                </small>
+                            </div>
+                            <a class="slider-product-showMore" href="https://www.chanel.com/fr/horlogerie/p/H6359/montre-premiere-rock/">
+                               découvrez<i class="arrow right"></i>
+                            </a>
+                        </div>
+                        <div class="slider-contentTest">
+                            <div class="slider-image">
+                                <img src="./assets/images/slider/slider-1.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="slider-Block" class="slider-Block slide-in-right" data-info="2">
+                        <div class="slider-contentTest">
+                            <div class="slider-product-title">
+                                <h1>première velours</h1>
+                            </div>
+                            <div class="slider-product-description">
+                                <small>
+                                    <p>
+                                        La <span class="uppercase">première velours</span> évoque la Place Vendôme par
+                                        son
+                                        boîtier au design octogonal. A glisser
+                                        au poignet de jour comme de nuit.
+                                    </p>
+                                </small>
+                            </div>
+                            <a class="slider-product-showMore" href="https://www.chanel.com/fr/horlogerie/p/H6125/montre-premiere-velours/">
+                             découvrez<i class="arrow right"></i>
+                            </a>
+                        </div>
+                        <div class="slider-contentTest">
+                            <div class="slider-image">
+                                <img src="./assets/images/slider/slider-2.jpg" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="next" onclick="plusSlides(1)"><i class="arrow right"></i></button>
+                </div>
+                <div class="slider-numberation">
+                    <span id="sliderId"><span id="sliderNumber"></span> / <span id="sliderCounter"></span>
+                </div>
+
+                <div class="buttonStyle">
+                    <a href="https://www.chanel.com/fr/horlogerie/premiere/c/4x2x2/">découvrir la collection</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="bottom">
+            <div class="bottom-images-container">
+                <div class="bottom-image"></div>
+                <div class="bottom-content">
+                    <div class="bottom-content-title">
+                        <h1>découvrir les pièces en boutique</h1>
+                    </div>
+                    <div class="bottom-content-paragraph">
+                        <small>
+                            <p>
+                                Découvrez les nouvelles pièces dans votre boutique
+                                <span class="uppercase">chanel</span>.
+                            </p>
+                        </small>
+                    </div>
+                </div>
+                <div class="buttonStyle">
+                    <a href="#">trouvez votre boutique</a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <span class="asterisk">*destination lune</span>
     </main>
-  </body>
+
+    <script>
+        window.onload = function onLoad() {
+            getsliderNumber();
+            sliderCounter();
+        }
+    </script>
+
+
+
+
+    <script>
+        function getsliderNumber() {
+            var sliderNumber = document.getElementsByClassName("active")[0].getAttribute("data-info");
+            document.getElementById("sliderNumber").innerHTML = sliderNumber;
+        }
+
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+            getsliderNumber();
+
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slider-Block");
+
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "flex";
+            slides[slideIndex - 1].classList.add("active");
+        }
+    </script>
+
+
+
+    <script>
+        function sliderCounter() {
+            let container_div = document.getElementById("slider");
+            let count = container_div.getElementsByClassName("slider-Block").length;
+
+            document.getElementById("sliderCounter").innerHTML = count;
+        }
+    </script>
+</body>
+
 </html>
